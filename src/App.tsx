@@ -58,6 +58,58 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        {/* Schedule */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Schedule</h2>
+          <div className="bg-white shadow-sm border border-slate-200 rounded-lg overflow-hidden">
+            <table className="min-w-full divide-y divide-slate-200">
+              <tbody className="bg-white divide-y divide-slate-200">
+                <tr className="bg-slate-50">
+                  <td className="px-6 py-3 text-sm font-medium text-slate-900" colSpan={2}>Opening</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">1</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Invited Talk 1 / Oral Presentations 1</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">2</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Invited Talk 2 / Oral Presentations 2</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">3</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Invited Talk 3 / Oral Presentations 3</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">4</td>
+                  <td className="px-6 py-3 text-sm text-slate-900 font-medium">Coffee Break – Job Fair 1</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">5</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Oral Presentations 4 / Panel Discussion 3</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">6</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Panel Discussion 1 / Panel Discussion 4</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">7</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Panel Discussion 2 / Closing</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="px-6 py-3 text-sm font-medium text-slate-900" colSpan={2}>Lunch – Job Fair 2</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">8</td>
+                  <td className="px-6 py-3 text-sm text-slate-900">Poster Session</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="px-6 py-3 text-sm font-medium text-slate-900" colSpan={2}>Closing and Networking Party</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Promising Topics */}
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Promising Topics</h2>
