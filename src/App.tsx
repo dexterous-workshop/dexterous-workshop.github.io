@@ -63,50 +63,91 @@ const App: React.FC = () => {
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Schedule</h2>
           <div className="bg-white shadow-sm border border-slate-200 rounded-lg overflow-hidden">
             <table className="min-w-full divide-y divide-slate-200">
-              <tbody className="bg-white divide-y divide-slate-200">
+              <tbody className="bg-white divide-y divide-slate-200 text-sm">
                 <tr className="bg-slate-50">
-                  <td className="px-6 py-3 text-sm font-medium text-slate-900" colSpan={2}>Opening</td>
+                  <td className="px-6 py-3 font-mono text-slate-400 w-12"></td>
+                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={2}>Opening</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">1</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Invited Talk 1 / Oral Presentations 1</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">1</td>
+                  <td className="px-6 py-3 text-slate-900 w-1/2 border-r border-slate-100">Invited Talk 1</td>
+                  <td className="px-6 py-3 text-slate-900 w-1/2">Oral Presentations 1</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">2</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Invited Talk 2 / Oral Presentations 2</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">2</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Invited Talk 2</td>
+                  <td className="px-6 py-3 text-slate-900">Oral Presentations 2</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">3</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Invited Talk 3 / Oral Presentations 3</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">3</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Invited Talk 3</td>
+                  <td className="px-6 py-3 text-slate-900">Oral Presentations 3</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">4</td>
-                  <td className="px-6 py-3 text-sm text-slate-900 font-medium">Coffee Break – Job Fair 1</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">4</td>
+                  <td className="px-6 py-3 text-slate-900 font-medium bg-blue-50/30" colSpan={2}>Coffee Break – Job Fair 1</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">5</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Oral Presentations 4 / Panel Discussion 3</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">5</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Oral Presentations 4</td>
+                  <td className="px-6 py-3 text-slate-900">Panel Discussion 3</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">6</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Panel Discussion 1 / Panel Discussion 4</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">6</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 1</td>
+                  <td className="px-6 py-3 text-slate-900">Panel Discussion 4</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">7</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Panel Discussion 2 / Closing</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">7</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 2</td>
+                  <td className="px-6 py-3 text-slate-900 font-medium text-red-600">Closing</td>
                 </tr>
                 <tr className="bg-slate-50">
-                  <td className="px-6 py-3 text-sm font-medium text-slate-900" colSpan={2}>Lunch – Job Fair 2</td>
+                  <td className="px-6 py-3 font-mono text-slate-400 w-12"></td>
+                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={2}>Lunch – Job Fair 2</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3 text-sm text-slate-600 font-mono w-12">8</td>
-                  <td className="px-6 py-3 text-sm text-slate-900">Poster Session</td>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">8</td>
+                  <td className="px-6 py-3 text-slate-900" colSpan={2}>Poster Session / Poster Session</td>
                 </tr>
                 <tr className="bg-slate-50">
-                  <td className="px-6 py-3 text-sm font-medium text-slate-900" colSpan={2}>Closing and Networking Party</td>
+                  <td className="px-6 py-3 font-mono text-slate-400 w-12"></td>
+                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={2}>Closing and Networking Party</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* Speakers */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Speakers</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
+            {Array.from({ length: 20 }).map((_, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-200 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <span className="text-slate-400 font-mono text-xs uppercase">TBD</span>
+                </div>
+                <h3 className="font-semibold text-slate-900 leading-tight">Name TBD</h3>
+                <p className="text-sm text-slate-500 mt-1">Affiliation</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Organizers */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Organizers</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <span className="text-slate-500 font-mono text-xs uppercase">TBD</span>
+                </div>
+                <h3 className="font-semibold text-slate-900 leading-tight">Name TBD</h3>
+                <p className="text-sm text-slate-500 mt-1">Affiliation</p>
+              </div>
+            ))}
           </div>
         </section>
 
