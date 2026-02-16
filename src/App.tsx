@@ -1,4 +1,6 @@
 import React from 'react';
+import pavelNiImg from './assets/pavelni.png';
+import placeholder from './assets/placeholder.jpg'
 
 const App: React.FC = () => {
   const topics = [
@@ -28,6 +30,9 @@ const App: React.FC = () => {
           </h1>
           <p className="text-xl text-slate-200 italic mb-8 max-w-3xl mx-auto">
             (reinforcement learning: decision and control, planning, hierarchical RL, robotics)
+          </p>
+          <p className="text-xl text-slate-200 italic mb-8 max-w-3xl mx-auto">
+            July 10th - COEX, Seoul, South Korea
           </p>
           <a 
             href="https://dexterous-workshop.github.io" 
@@ -160,20 +165,30 @@ const App: React.FC = () => {
 
               <div className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <span className="text-slate-500 font-mono text-xs uppercase">Pavel Ni</span>
+                  <img src={pavelNiImg} alt="Pavel Ni" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-semibold text-slate-900 leading-tight">Pavel Ni, Ph.D.</h3>
                 <p className="text-sm text-slate-800 mt-1">Gwangju Institute of Science and Technology</p>
                 <p className="text-sm text-slate-500 mt-1">NextMetal</p>
               </div>
 
-            {Array.from({ length: 5 }).map((_, i) => (
+             <div className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
+                </div>
+                
+                
+                <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
+                <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
+              </div>
+
+            {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <span className="text-slate-500 font-mono text-xs uppercase">YoungHak Shin</span>
+                  <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
-                <p className="text-sm text-slate-500 mt-1">Mokpo National University</p>
+                <h3 className="font-semibold text-slate-800 leading-tight">TBD</h3>
+                <p className="text-sm text-slate-500 mt-1">--</p>
               </div>
             ))}
           </div>
