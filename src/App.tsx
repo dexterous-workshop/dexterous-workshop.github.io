@@ -17,20 +17,23 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans">
       {/* Header */}
-      <header className="bg-slate-900 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-blue-400 font-semibold mb-2">2026 ICML Workshop</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+      <header 
+        className="relative text-white py-24 px-4 bg-cover bg-center"
+        style={{ backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/hero-seoul.jpg')" }}
+      >
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <p className="text-blue-400 font-bold uppercase tracking-wider mb-2">2026 ICML Workshop</p>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
             Multimodal Representation Learning for Dexterous Manipulation
           </h1>
-          <p className="text-lg text-slate-300 italic mb-4">
+          <p className="text-xl text-slate-200 italic mb-8 max-w-3xl mx-auto">
             (reinforcement learning: decision and control, planning, hierarchical RL, robotics)
           </p>
           <a 
             href="https://dexterous-workshop.github.io" 
-            className="text-blue-400 hover:underline"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all shadow-lg"
           >
-            https://dexterous-workshop.github.io
+            dexterous-workshop.github.io
           </a>
         </div>
       </header>
@@ -41,7 +44,7 @@ const App: React.FC = () => {
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Summary</h2>
           <p className="text-slate-700 leading-relaxed">
-            This workshop will focus on the machine learning foundations of dexterous manipulation and embodied intelligence, with a focus on reinforcement learning for decision-making, control, and hierarchical planning. Tasks such as fragile object handling, slip detection, and multi-object manipulation fundamentally require the integration of rich multimodal sensory signals—including tactile, proprioceptive, and visual inputs—with scalable representation learning and sequential decision-making algorithms.
+            This workshop focuses on the machine learning foundations of dexterous manipulation and embodied intelligence, with particular emphasis on reinforcement learning for decision-making, control, and hierarchical planning. Tasks such as fragile object handling, slip detection, and multi-object manipulation fundamentally require the integration of rich multimodal sensory signals—including tactile, proprioceptive, and visual inputs—with scalable representation learning and sequential decision-making algorithms.
           </p>
         </section>
 
@@ -50,106 +53,14 @@ const App: React.FC = () => {
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Description</h2>
           <div className="text-slate-700 space-y-4 leading-relaxed">
             <p>
-              Humanoid robots may represent the next major computing paradigm following personal computers, smartphones, and virtual reality. Rather than interacting with information through screens, keyboards, and touch interfaces, humans may increasingly collaborate directly with embodied intelligent agents in the physical world. For example, instead of searching for an apple pie recipe on a smartphone and repeatedly shifting attention between the screen and the task, a person could ask a humanoid robot to retrieve the best recipe and prepare it together—without relying on traditional graphical interfaces.
+              Humanoid robots may represent a new paradigm for embodied computing. Instead of immersing ourselves in virtual environments through screens and networked devices, we may increasingly bring digital intelligence into the physical world through embodied agents. Rather than interacting with information via keyboards and displays, humans could collaborate directly with intelligent systems situated in shared environments—for example, preparing a meal together with a humanoid robot through natural dialogue and physical coordination.
             </p>
             <p>
-              While this vision remains aspirational, recent advances in machine learning, embodied AI, and robotics are bringing us closer to its realization. In particular, progress in reinforcement learning, multimodal representation learning, and hierarchical decision-making has begun to enable more adaptive and generalizable control of high-degree-of-freedom systems. As a community of scientists, engineers, and researchers, we must collectively accelerate advances in learning-based control, perception, planning, and human–robot interaction. This workshop aims to bring together interdisciplinary perspectives to address the core machine learning challenges required to make embodied intelligence practical, robust, and scalable.
+              While this vision remains aspirational, recent advances in machine learning, embodied AI, and robotics are steadily bringing it closer to reality. In particular, progress in reinforcement learning, multimodal representation learning, and hierarchical decision-making has enabled more adaptive and generalizable control of high-degree-of-freedom systems. However, achieving robust, contact-rich interaction in unstructured environments remains a fundamental machine learning challenge. As a community of scientists, engineers, and researchers, we must accelerate advances in learning-based control, perception, planning, and human–robot interaction. This workshop brings together interdisciplinary perspectives to address the core ML problems underlying dexterous manipulation and embodied intelligence, with the goal of making such systems practical, reliable, and scalable.
             </p>
           </div>
         </section>
 
-        {/* Schedule */}
-        <section>
-          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Schedule</h2>
-          <div className="bg-white shadow-sm border border-slate-200 rounded-lg overflow-hidden">
-            <table className="min-w-full divide-y divide-slate-200">
-              <tbody className="bg-white divide-y divide-slate-200 text-sm">
-                <tr className="bg-slate-50">
-                  <td className="px-6 py-3 font-mono text-slate-400 w-12"></td>
-                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={2}>Opening</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">1</td>
-                  <td className="px-6 py-3 text-slate-900 w-1/2 border-r border-slate-100">Invited Talk 1</td>
-                  <td className="px-6 py-3 text-slate-900 w-1/2">Oral Presentations 1</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">2</td>
-                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Invited Talk 2</td>
-                  <td className="px-6 py-3 text-slate-900">Oral Presentations 2</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">3</td>
-                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Invited Talk 3</td>
-                  <td className="px-6 py-3 text-slate-900">Oral Presentations 3</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">4</td>
-                  <td className="px-6 py-3 text-slate-900 font-medium bg-blue-50/30" colSpan={2}>Coffee Break – Job Fair 1</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">5</td>
-                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Oral Presentations 4</td>
-                  <td className="px-6 py-3 text-slate-900">Panel Discussion 3</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">6</td>
-                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 1</td>
-                  <td className="px-6 py-3 text-slate-900">Panel Discussion 4</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">7</td>
-                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 2</td>
-                  <td className="px-6 py-3 text-slate-900 font-medium text-red-600">Closing</td>
-                </tr>
-                <tr className="bg-slate-50">
-                  <td className="px-6 py-3 font-mono text-slate-400 w-12"></td>
-                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={2}>Lunch – Job Fair 2</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-3 text-slate-500 font-mono w-12">8</td>
-                  <td className="px-6 py-3 text-slate-900" colSpan={2}>Poster Session / Poster Session</td>
-                </tr>
-                <tr className="bg-slate-50">
-                  <td className="px-6 py-3 font-mono text-slate-400 w-12"></td>
-                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={2}>Closing and Networking Party</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Speakers */}
-        <section>
-          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Speakers</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-200 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <span className="text-slate-400 font-mono text-xs uppercase">TBD</span>
-                </div>
-                <h3 className="font-semibold text-slate-900 leading-tight">Name TBD</h3>
-                <p className="text-sm text-slate-500 mt-1">Affiliation</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Organizers */}
-        <section>
-          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Organizers</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <span className="text-slate-500 font-mono text-xs uppercase">TBD</span>
-                </div>
-                <h3 className="font-semibold text-slate-900 leading-tight">Name TBD</h3>
-                <p className="text-sm text-slate-500 mt-1">Affiliation</p>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Promising Topics */}
         <section>
@@ -168,6 +79,107 @@ const App: React.FC = () => {
             ))}
           </ul>
         </section>
+        
+        {/* Schedule */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Schedule</h2>
+          <div className="bg-white shadow-sm border border-slate-200 rounded-lg overflow-hidden">
+            <table className="min-w-full divide-y divide-slate-200">
+              <tbody className="bg-white divide-y divide-slate-200 text-sm">
+                <tr className="bg-slate-50">
+                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={3}>Opening</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">1</td>
+                  <td className="px-6 py-3 text-slate-900 w-1/2 border-r border-slate-100">Invited Talk 1</td>
+                  <td className="px-6 py-3 text-slate-900 w-1/2">Oral Presentations 1</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">2</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Invited Talk 2</td>
+                  <td className="px-6 py-3 text-slate-900">Oral Presentations 2</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">3</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Invited Talk 3</td>
+                  <td className="px-6 py-3 text-slate-900">Oral Presentations 3</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-900 font-medium bg-blue-50/30" colSpan={3}>Coffee Break – Job Fair 1</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">6</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 1</td>
+                  <td className="px-6 py-3 text-slate-900">Panel Discussion 4</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">7</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 2</td>
+                  <td className="px-6 py-3 text-slate-900">Oral Presentations 4</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">5</td>
+                  <td className="px-6 py-3 text-slate-900 border-r border-slate-100">Panel Discussion 3</td>
+                  <td className="px-6 py-3 text-slate-900">Oral Presentations 5</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={3}>Lunch – Job Fair 2</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-3 text-slate-500 font-mono w-12">8</td>
+                  <td className="px-6 py-3 text-slate-900" colSpan={2}>Poster Sessions</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="px-6 py-3 font-medium text-slate-900" colSpan={3}>Closing and Networking Party</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Speakers */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Speakers</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-200 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <span className="text-slate-400 font-mono text-xs uppercase">TBD</span>
+                </div>
+                <h3 className="font-semibold text-slate-900 leading-tight">Name TBD</h3>
+                <p className="text-sm text-slate-500 mt-1">Affiliation</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Organizers */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Organizers</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
+
+              <div className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <span className="text-slate-500 font-mono text-xs uppercase">Pavel Ni</span>
+                </div>
+                <h3 className="font-semibold text-slate-900 leading-tight">Pavel Ni, Ph.D.</h3>
+                <p className="text-sm text-slate-800 mt-1">Gwangju Institute of Science and Technology</p>
+                <p className="text-sm text-slate-500 mt-1">NextMetal</p>
+              </div>
+
+            {Array.from({ length: 5 }).map((_, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <span className="text-slate-500 font-mono text-xs uppercase">YoungHak Shin</span>
+                </div>
+                <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
+                <p className="text-sm text-slate-500 mt-1">Mokpo National University</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
       </main>
 
       {/* Footer */}
