@@ -172,7 +172,7 @@ const App: React.FC = () => {
                 <p className="text-sm text-slate-500 mt-1">NextMetal</p>
               </div>
 
-             <div className="text-center group">
+             {/* <div className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                   <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
                 </div>
@@ -180,7 +180,7 @@ const App: React.FC = () => {
                 
                 <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
                 <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
-              </div>
+              </div> */}
 
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="text-center group">
