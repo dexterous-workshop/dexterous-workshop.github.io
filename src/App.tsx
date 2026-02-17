@@ -66,6 +66,20 @@ const App: React.FC = () => {
           </div>
         </section>
 
+        {/* Message from Organizers */}
+        <section className="bg-blue-50/50 border border-blue-100 rounded-2xl p-8 md:p-12 shadow-sm">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">  
+            From the Organizers
+          </h2>
+          <div className="text-slate-700 space-y-4 leading-relaxed italic">
+            <p>
+              We invite contributions from researchers across academia, industry, and startups, and we encourage participation from individuals of all backgrounds, countries, and career stages. Our goal is to create a vibrant forum where diverse perspectives converge to accelerate the future of embodied intelligence.
+            </p>
+            <p>
+              We are deeply committed to fostering diverse and inclusive discussions. Dexterous manipulation is a grand challenge that requires collaboration among a broad range of perspectives.
+            </p>
+          </div>
+        </section>
 
         {/* Promising Topics */}
         <section>
@@ -85,6 +99,39 @@ const App: React.FC = () => {
           </ul>
         </section>
         
+        {/* Important Information */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Important Information</h2>
+          <div className="text-slate-700 space-y-4 leading-relaxed mb-6">
+          <p>The final datea and author instructions will be announced on March 20th.</p>
+          </div>
+          <table className="min-w-full divide-y divide-slate-200">
+            <tbody className="bg-white divide-y divide-slate-200 text-sm">
+              <tr className="bg-slate-50">
+                <td className="px-6 py-3 font-medium text-slate-900">Submission Deadline</td>
+                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="px-6 py-3 font-medium text-slate-900">Review Deadline</td>
+                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="px-6 py-3 font-medium text-slate-900">Accepted Decision</td>
+                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="px-6 py-3 font-medium text-slate-900">Camera Ready Deadline</td>
+                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
+              </tr>
+              <tr className="bg-slate-50">
+                <td className="px-6 py-3 font-medium text-slate-900">Workshop Date:</td>
+                <td className="px-6 py-3 font-medium text-slate-900">July 10 or 11th</td>
+              </tr>              
+            </tbody>
+          </table>
+        </section>
+
+
         {/* Schedule */}
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Schedule</h2>
@@ -146,13 +193,13 @@ const App: React.FC = () => {
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Speakers</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
-            {Array.from({ length: 8 }).map((_, i) => (
+            {Array.from({ length: 10 }).map((_, i) => (
               <div key={i} className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-200 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <span className="text-slate-400 font-mono text-xs uppercase">TBD</span>
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                  <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-semibold text-slate-900 leading-tight">Name TBD</h3>
-                <p className="text-sm text-slate-500 mt-1">Affiliation</p>
+                <h3 className="font-semibold text-slate-900 leading-tight">TBA</h3>
+                <p className="text-sm text-slate-500 mt-1">--</p>
               </div>
             ))}
           </div>
@@ -170,9 +217,10 @@ const App: React.FC = () => {
                 <h3 className="font-semibold text-slate-900 leading-tight">Pavel Ni, Ph.D.</h3>
                 <p className="text-sm text-slate-800 mt-1">Gwangju Institute of Science and Technology</p>
                 <p className="text-sm text-slate-500 mt-1">NextMetal</p>
+                <a href='https://www.linkedin.com/in/pavel-ni/' target='_blank'>LinkedIn</a>
               </div>
 
-             {/* <div className="text-center group">
+             <div className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                   <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
                 </div>
@@ -180,20 +228,30 @@ const App: React.FC = () => {
                 
                 <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
                 <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
-              </div> */}
+                <p className="text-sm text-slate-500 mt-1"> . </p>
+                <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
+              </div>
 
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                   <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-semibold text-slate-800 leading-tight">TBD</h3>
+                <h3 className="font-semibold text-slate-800 leading-tight">TBA</h3>
                 <p className="text-sm text-slate-500 mt-1">--</p>
               </div>
             ))}
           </div>
         </section>
 
+
+        {/* Sponsors */}
+          <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Sponsors</h2>
+          <p className="text-slate-700 leading-relaxed">
+          We are seeking sponsors to support paper awards, job fair, and the overall organization of the workshop. Your support will help us recognize outstanding research while ensuring a high-quality and inclusive event experience.
+          </p>
+          </section>
 
       </main>
 
