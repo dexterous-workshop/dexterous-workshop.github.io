@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans">
       {/* Header */}
-      <header 
+      <header
         className="relative text-white py-24 px-4 bg-cover bg-center"
         style={{ backgroundImage: "linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('/hero-seoul.jpg')" }}
       >
@@ -34,8 +34,8 @@ const App: React.FC = () => {
           <p className="text-xl text-slate-200 italic mb-8 max-w-3xl mx-auto">
             July 10th - COEX, Seoul, South Korea
           </p>
-          <a 
-            href="https://dexterous-workshop.github.io" 
+          <a
+            href="https://dexterous-workshop.github.io"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition-all shadow-lg"
           >
             dexterous-workshop.github.io
@@ -68,7 +68,7 @@ const App: React.FC = () => {
 
         {/* Message from Organizers */}
         <section className="bg-blue-50/50 border border-blue-100 rounded-2xl p-8 md:p-12 shadow-sm">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">  
+          <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
             From the Organizers
           </h2>
           <div className="text-slate-700 space-y-4 leading-relaxed italic">
@@ -98,12 +98,31 @@ const App: React.FC = () => {
             ))}
           </ul>
         </section>
-        
+
+        {/* Call for papers */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Call for Papers</h2>
+          <div className="text-slate-700 space-y-4 leading-relaxed">
+            <p>
+              We invite submissions of extended abstracts of up to 4 pages (excluding references) on topics related to multimodal representation learning, reinforcement learning, and dexterous manipulation.
+              In addition to mature research contributions, we strongly encourage submissions describing preliminary results, negative results, position papers, benchmark proposals, system insights, and open challenges. Our goal is to foster thoughtful discussion and identify promising directions in embodied intelligence and contact-rich manipulation.
+              Submissions may present work that is ongoing, recently published, or under review elsewhere. Accepted papers will be posted on the workshop website but will not be formally archived or published.
+            </p>
+            <p>
+              A subset of accepted submissions will be selected for 15-minute contributed talks, and the remaining accepted papers will participate in a poster and demo session designed to promote active discussion and exchange across academia, startups, and industry.
+              All submissions must follow the official ICML formatting guidelines. The review process will be double-blind, and authors should ensure that no identifying information is included in the manuscript.
+              Authors may optionally submit supplementary materials (e.g., datasets, code, videos, demo previews, appendices).
+            </p>
+          </div>
+        </section>
+
+        <p>Link to submission form will be opened soon</p>
+
         {/* Important Information */}
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Important Information</h2>
           <div className="text-slate-700 space-y-4 leading-relaxed mb-6">
-          <p>The final datea and author instructions will be announced on March 20th.</p>
+            <p>The final datea and author instructions will be announced on March 20th.</p>
           </div>
           <table className="min-w-full divide-y divide-slate-200">
             <tbody className="bg-white divide-y divide-slate-200 text-sm">
@@ -126,7 +145,7 @@ const App: React.FC = () => {
               <tr className="bg-slate-50">
                 <td className="px-6 py-3 font-medium text-slate-900">Workshop Date:</td>
                 <td className="px-6 py-3 font-medium text-slate-900">July 10 or 11th</td>
-              </tr>              
+              </tr>
             </tbody>
           </table>
         </section>
@@ -210,27 +229,27 @@ const App: React.FC = () => {
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Organizers</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
 
-              <div className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <img src={pavelNiImg} alt="Pavel Ni" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="font-semibold text-slate-900 leading-tight">Pavel Ni, Ph.D.</h3>
-                <p className="text-sm text-slate-800 mt-1">Gwangju Institute of Science and Technology</p>
-                <p className="text-sm text-slate-500 mt-1">NextMetal</p>
-                <a href='https://www.linkedin.com/in/pavel-ni/' target='_blank'>LinkedIn</a>
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={pavelNiImg} alt="Pavel Ni" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Pavel Ni, Ph.D.</h3>
+              <p className="text-sm text-slate-800 mt-1">Gwangju Institute of Science and Technology</p>
+              <p className="text-sm text-slate-500 mt-1">NextMetal</p>
+              <a href='https://www.linkedin.com/in/pavel-ni/' target='_blank'>LinkedIn</a>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
               </div>
 
-             <div className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
-                </div>
-                
-                
-                <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
-                <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
-                <p className="text-sm text-slate-500 mt-1"> . </p>
-                <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
-              </div>
+
+              <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
+              <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
+              <p className="text-sm text-slate-500 mt-1"> . </p>
+              <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
+            </div>
 
             {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="text-center group">
@@ -246,12 +265,12 @@ const App: React.FC = () => {
 
 
         {/* Sponsors */}
-          <section>
+        <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Sponsors</h2>
           <p className="text-slate-700 leading-relaxed">
-          We are seeking sponsors to support paper awards, job fair, and the overall organization of the workshop. Your support will help us recognize outstanding research while ensuring a high-quality and inclusive event experience.
+            We are seeking sponsors to support paper awards, job fair, and the overall organization of the workshop. Your support will help us recognize outstanding research while ensuring a high-quality and inclusive event experience.
           </p>
-          </section>
+        </section>
 
       </main>
 

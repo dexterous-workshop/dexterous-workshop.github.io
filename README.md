@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Multimodal Representation Learning for Dexterous Manipulation Workshop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the website for the ICML 2026 Workshop on Multimodal Representation Learning for Dexterous Manipulation.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get the project up and running locally, follow these steps:
 
-## React Compiler
+1.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2.  **Run the Development Server:**
+    ```bash
+    npm run dev
+    ```
+    This will start a local development server, and you can view the application in your browser, usually at `http://localhost:5173`.
 
-## Expanding the ESLint configuration
+## Deployment
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To deploy the workshop website to GitHub Pages, follow these steps:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Configure `vite.config.ts` (if necessary):**
+    Ensure your `vite.config.ts` is configured for GitHub Pages. You might need to set the `base` option to your repository name. For example, if your repository is `username/my-repo`, you would set `base: '/my-repo/'`. Given this project's name is `dexterous-workshop.github.io`, it might not need a specific `base` if it's a project page, but it's good to check.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **Build the Project:**
+    ```bash
+    npm run build
+    ```
+    This command will build the static assets into the `dist` directory.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3.  **Deploy to GitHub Pages:**
+    You can use a tool like `gh-pages` to deploy. First, install it:
+    ```bash
+    npm install gh-pages --save-dev
+    ```
+    Then, add a deploy script to your `package.json`:
+    ```json
+    {
+      "scripts": {
+        "deploy": "gh-pages -d dist"
+      }
+    }
+    ```
+    Finally, run the deploy command:
+    ```bash
+    npm run deploy
+    ```
+    This will push the contents of the `dist` folder to the `gh-pages` branch of your repository. Ensure your GitHub Pages settings are configured to serve from the `gh-pages` branch.
