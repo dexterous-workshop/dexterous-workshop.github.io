@@ -1,5 +1,8 @@
 import React from 'react';
 import pavelNiImg from './assets/pavelni.png';
+import seungchanLee from './assets/seungchanlee.png';
+
+import alexanderSchmitz from './assets/alexanderschmitz.jpeg';
 import placeholder from './assets/placeholder.jpg'
 
 const App: React.FC = () => {
@@ -208,20 +211,40 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* Speakers */}
         <section>
-          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Speakers</h2>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">
+            Speakers
+          </h2>
+
+          <p>The full list of Speakers, Panelists, Guests, and Sponsorts will be announced soon.</p>
+            <br />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
-            {Array.from({ length: 10 }).map((_, i) => (
+          <div className="text-center group">
+            <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+              <img src={alexanderSchmitz} alt="Dr. Alexander Schmitz" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="font-semibold text-slate-900 leading-tight">Dr. Alexander Schmitz</h3>
+            <p className="text-sm text-slate-800 mt-1">XELA Robotics</p>
+            <p className="text-sm text-slate-500 mt-1">Waseda University</p>
+            <a href='https://www.linkedin.com/in/schmitz-alexander/' target='_blank'>LinkedIn</a>
+          </div>
+
+
+            {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
+                  <img
+                    src={placeholder}
+                    alt="Speaker to be announced"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-semibold text-slate-900 leading-tight">TBA</h3>
                 <p className="text-sm text-slate-500 mt-1">--</p>
               </div>
             ))}
           </div>
+
         </section>
 
         {/* Organizers */}
@@ -241,6 +264,16 @@ const App: React.FC = () => {
 
             <div className="text-center group">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={seungchanLee} alt="Seungchan Lee" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Seungchan Lee, Ph.D.</h3>
+              <p className="text-sm text-slate-800 mt-1">Korea Institute of Machinery & Materials</p>
+              <p className="text-sm text-slate-500 mt-1"> - </p>
+              <a href='https://www.linkedin.com/in/lee-seungchan-9826bba7' target='_blank'>LinkedIn</a>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                 <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
               </div>
 
@@ -250,19 +283,15 @@ const App: React.FC = () => {
               <p className="text-sm text-slate-500 mt-1"> . </p>
               <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
             </div>
-
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="font-semibold text-slate-800 leading-tight">TBA</h3>
-                <p className="text-sm text-slate-500 mt-1">--</p>
-              </div>
-            ))}
           </div>
         </section>
 
+        {/* <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Steering Committee</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8"> 
+
+          </div>
+        </section> */}
 
         {/* Sponsors */}
         <section>
@@ -270,6 +299,22 @@ const App: React.FC = () => {
           <p className="text-slate-700 leading-relaxed">
             We are seeking sponsors to support paper awards, job fair, and the overall organization of the workshop. Your support will help us recognize outstanding research while ensuring a high-quality and inclusive event experience.
           </p>
+        </section>
+
+        {/* Inquiries */}
+        <section>
+          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">
+            Inquiries
+          </h2>
+
+          <p className="text-slate-700 leading-relaxed">
+            For any questions or inquiries, please contact the workshop organizers at:
+          </p>
+
+          <ul className="list-disc pl-6 mt-2 text-slate-700">
+            <li>nipavels [at] gmail . com</li>
+            <li>chans [at] kimm . re . kr</li>
+          </ul>
         </section>
 
       </main>
