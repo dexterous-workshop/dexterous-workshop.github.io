@@ -1,7 +1,9 @@
 import React from 'react';
 import pavelNiImg from './assets/pavelni.png';
 import seungchanLee from './assets/seungchanlee.png';
-
+import jehyukJang from './assets/jehyukjang.png';
+import jusungKang from './assets/jusungkang.jpg';
+import zhengtongXu from './assets/zhengtongxu.jpg';
 import alexanderSchmitz from './assets/alexanderschmitz.jpeg';
 import placeholder from './assets/placeholder.jpg'
 
@@ -217,20 +219,29 @@ const App: React.FC = () => {
           </h2>
 
           <p>The full list of Speakers, Panelists, Guests, and Sponsorts will be announced soon.</p>
-            <br />
+          <br />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
-          <div className="text-center group">
-            <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-              <img src={alexanderSchmitz} alt="Dr. Alexander Schmitz" className="w-full h-full object-cover" />
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={alexanderSchmitz} alt="Dr. Alexander Schmitz" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Dr. Alexander Schmitz</h3>
+              <p className="text-sm text-slate-800 mt-1">XELA Robotics</p>
+              <p className="text-sm text-slate-500 mt-1">Waseda University</p>
+              <a href='https://www.linkedin.com/in/schmitz-alexander/' target='_blank'>LinkedIn</a>
             </div>
-            <h3 className="font-semibold text-slate-900 leading-tight">Dr. Alexander Schmitz</h3>
-            <p className="text-sm text-slate-800 mt-1">XELA Robotics</p>
-            <p className="text-sm text-slate-500 mt-1">Waseda University</p>
-            <a href='https://www.linkedin.com/in/schmitz-alexander/' target='_blank'>LinkedIn</a>
-          </div>
 
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={zhengtongXu} alt="Zhengtong Xu" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Zhengtong Xu, Ph.D. candidate</h3>
+              <p className="text-sm text-slate-800 mt-1">Purdue University</p>
+              <p className="text-sm text-slate-500 mt-1"> - </p>
+              <a href='https://www.linkedin.com/in/zhengtong-xu-4287b8174/' target='_blank'>LinkedIn</a>
+            </div>
 
-            {Array.from({ length: 4 }).map((_, i) => (
+            {Array.from({ length: 3 }).map((_, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                   <img
@@ -276,13 +287,31 @@ const App: React.FC = () => {
               <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                 <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
               </div>
-
-
               <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
               <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
               <p className="text-sm text-slate-500 mt-1"> . </p>
               <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
             </div>
+
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={jehyukJang} alt="Jehyuk Jang" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-800 leading-tight">Jehyuk Jang, Ph.D.</h3>
+              <p className="text-sm text-slate-800 mt-1">Tokamak Network</p>
+              <p className="text-sm text-slate-500 mt-1"> . </p>
+              <a href='https://www.linkedin.com/in/jehyuk-jang/' target='_blank'>LinkedIn</a>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={jusungKang} alt="JuSung Kang" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-800 leading-tight">JuSung Kang, Ph.D.</h3>
+              <p className="text-sm text-slate-800 mt-1">ETRI</p>
+              <p className="text-sm text-slate-500 mt-1"> . </p>
+              <a href='https://www.linkedin.com/in/jusung-kang-41343467/' target='_blank'>LinkedIn</a>
+            </div>            
           </div>
         </section>
 
