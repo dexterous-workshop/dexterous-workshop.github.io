@@ -5,7 +5,11 @@ import jehyukJang from './assets/jehyukjang.png';
 import jusungKang from './assets/jusungkang.jpg';
 import zhengtongXu from './assets/zhengtongxu.jpg';
 import alexanderSchmitz from './assets/alexanderschmitz.jpeg';
+import yukiNoguchi from './assets/yukinoguchi.png';
 import placeholder from './assets/placeholder.jpg'
+import rlwrldLogo from './assets/rlwrld.jpg';
+import xelaLogo from './assets/xela-logo.jpg';
+// import skt from './assets/skt.jpg';
 
 const App: React.FC = () => {
   const topics = [
@@ -47,6 +51,17 @@ const App: React.FC = () => {
           </a>
         </div>
       </header>
+
+      {/* Participating Companies */}
+      <section className="py-12 border-b border-slate-100">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-70 hover:opacity-100 transition-opacity">
+            <img src={rlwrldLogo} alt="RL-World" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src={xelaLogo} alt="Xela Robotics" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            {/* <img src={skt} alt="SKT" className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all" /> */}
+          </div>
+        </div>
+      </section>
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-12 px-4 space-y-12">
@@ -241,7 +256,17 @@ const App: React.FC = () => {
               <a href='https://www.linkedin.com/in/zhengtong-xu-4287b8174/' target='_blank'>LinkedIn</a>
             </div>
 
-            {Array.from({ length: 3 }).map((_, i) => (
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={yukiNoguchi} alt="Yuki Noguchi" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Yuki NOGUCHI, Robotics Engineer / Founder</h3>
+              <p className="text-sm text-slate-800 mt-1">Kawada Robotics Corporation</p>
+              <p className="text-sm text-slate-500 mt-1">Robot Cafe Hare-to-Ke</p>
+              <a href='https://www.linkedin.com/in/yuki-noguchi-4baa1032a/' target='_blank'>LinkedIn</a>
+            </div>            
+
+            {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                   <img
