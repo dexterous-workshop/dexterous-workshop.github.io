@@ -121,7 +121,16 @@ const App: React.FC = () => {
 
         {/* Call for papers */}
         <section>
-          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Call for Papers</h2>
+          <div className="flex justify-between items-end border-b-2 border-slate-200 pb-2 mb-4">
+            <h2 className="text-2xl font-bold">Call for Papers</h2>
+            <button
+              disabled
+              title="Submissions open on March 20th"
+              className="bg-slate-300 text-white text-sm font-semibold py-2 px-4 rounded-lg cursor-not-allowed shadow-sm mb-1"
+            >
+              Submit
+            </button>
+          </div>
           <div className="text-slate-700 space-y-4 leading-relaxed">
             <p>
               We invite submissions of extended abstracts of up to 4 pages (excluding references) on topics related to multimodal representation learning, reinforcement learning, and dexterous manipulation.
@@ -136,27 +145,25 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <p>Link to submission form will be opened soon</p>
-
         {/* Important Information */}
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-4">Important Information</h2>
           <div className="text-slate-700 space-y-4 leading-relaxed mb-6">
-            <p>The final datea and author instructions will be announced on March 20th.</p>
+            <p>The final dates and author instructions will be announced on March 20th.</p>
           </div>
           <table className="min-w-full divide-y divide-slate-200">
             <tbody className="bg-white divide-y divide-slate-200 text-sm">
               <tr className="bg-slate-50">
+                <td className="px-6 py-3 font-medium text-slate-900">Paper Submissions Open</td>
+                <td className="px-6 py-3 font-medium text-slate-900">March 20th</td>
+              </tr>
+              <tr className="bg-slate-50">
                 <td className="px-6 py-3 font-medium text-slate-900">Submission Deadline</td>
-                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
+                <td className="px-6 py-3 font-medium text-slate-900">April 24th</td>
               </tr>
               <tr className="bg-slate-50">
-                <td className="px-6 py-3 font-medium text-slate-900">Review Deadline</td>
-                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
-              </tr>
-              <tr className="bg-slate-50">
-                <td className="px-6 py-3 font-medium text-slate-900">Accepted Decision</td>
-                <td className="px-6 py-3 font-medium text-slate-900">TBD</td>
+                <td className="px-6 py-3 font-medium text-slate-900">Acceptance Notification</td>
+                <td className="px-6 py-3 font-medium text-slate-900">May 15th</td>
               </tr>
               <tr className="bg-slate-50">
                 <td className="px-6 py-3 font-medium text-slate-900">Camera Ready Deadline</td>
@@ -229,9 +236,17 @@ const App: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">
-            Speakers
-          </h2>
+          <div className="flex justify-between items-end border-b-2 border-slate-200 pb-2 mb-8">
+            <h2 className="text-2xl font-bold">Speakers</h2>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdD0QcQhnkvSv4wjp4P8El8bXxulrHFdlU9CUrqixH1GElx1w/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm mb-1"
+            >
+              Apply
+            </a>
+          </div>
 
           <p>The full list of Speakers, Panelists, Guests, and Sponsorts will be announced soon.</p>
           <br />
@@ -264,7 +279,7 @@ const App: React.FC = () => {
               <p className="text-sm text-slate-800 mt-1">Kawada Robotics Corporation</p>
               <p className="text-sm text-slate-500 mt-1">Robot Cafe Hare-to-Ke</p>
               <a href='https://www.linkedin.com/in/yuki-noguchi-4baa1032a/' target='_blank'>LinkedIn</a>
-            </div>            
+            </div>
 
             {Array.from({ length: 2 }).map((_, i) => (
               <div key={i} className="text-center group">
@@ -336,7 +351,7 @@ const App: React.FC = () => {
               <p className="text-sm text-slate-800 mt-1">ETRI</p>
               <p className="text-sm text-slate-500 mt-1"> . </p>
               <a href='https://www.linkedin.com/in/jusung-kang-41343467/' target='_blank'>LinkedIn</a>
-            </div>            
+            </div>
           </div>
         </section>
 
