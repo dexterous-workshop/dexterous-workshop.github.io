@@ -6,6 +6,9 @@ import jusungKang from './assets/jusungkang.jpg';
 import zhengtongXu from './assets/zhengtongxu.jpg';
 import alexanderSchmitz from './assets/alexanderschmitz.jpeg';
 import yukiNoguchi from './assets/yukinoguchi.png';
+import changjooNam from './assets/changjoonam.png';
+import sharanNayak from './assets/sharannayak.png';
+
 import placeholder from './assets/placeholder.jpg'
 import rlwrldLogo from './assets/rlwrld.jpg';
 import xelaLogo from './assets/xela-logo.jpg';
@@ -281,7 +284,17 @@ const App: React.FC = () => {
               <a href='https://www.linkedin.com/in/yuki-noguchi-4baa1032a/' target='_blank'>LinkedIn</a>
             </div>
 
-            {Array.from({ length: 2 }).map((_, i) => (
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={sharanNayak} alt="Sharan Nayak" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Sharan Nayak</h3>
+              <p className="text-sm text-slate-800 mt-1">Unewverse Inc. (Ooju)</p>
+              <p className="text-sm text-slate-500 mt-1">SpaceX, NASA JPL</p>
+              <a href='https://www.linkedin.com/in/sharan-nayak' target='_blank'>LinkedIn</a>
+            </div>
+
+            {Array.from({ length: 1 }).map((_, i) => (
               <div key={i} className="text-center group">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                   <img
@@ -355,12 +368,22 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        {/* <section>
+        <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Steering Committee</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8"> 
 
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={changjooNam} alt="Changjoo Nam" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-900 leading-tight">Changjoo Nam, Professor</h3>
+              <p className="text-sm text-slate-800 mt-1">Sogang University</p>
+              <p className="text-sm text-slate-500 mt-1">AI Robotics Lab</p>
+              <a href='https://sites.google.com/site/changjoonam/' target='_blank'>Website</a>
+            </div>
+
           </div>
-        </section> */}
+        </section>
 
         {/* Sponsors */}
         <section>
