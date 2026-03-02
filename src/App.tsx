@@ -238,81 +238,113 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <section>
-          <div className="flex justify-between items-end border-b-2 border-slate-200 pb-2 mb-8">
-            <h2 className="text-2xl font-bold">Speakers</h2>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdD0QcQhnkvSv4wjp4P8El8bXxulrHFdlU9CUrqixH1GElx1w/viewform?usp=dialog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm mb-1"
-            >
-              Apply
-            </a>
-          </div>
-
-          <p>The full list of Speakers, Panelists, Guests, and Sponsorts will be announced soon.</p>
-          <br />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
-            <div className="text-center group">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                <img src={alexanderSchmitz} alt="Dr. Alexander Schmitz" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-semibold text-slate-900 leading-tight">Dr. Alexander Schmitz</h3>
-              <p className="text-sm text-slate-800 mt-1">XELA Robotics</p>
-              <p className="text-sm text-slate-500 mt-1">Waseda University</p>
-              <a href='https://www.linkedin.com/in/schmitz-alexander/' target='_blank'>LinkedIn</a>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                <img src={zhengtongXu} alt="Zhengtong Xu" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-semibold text-slate-900 leading-tight">Zhengtong Xu, Ph.D. candidate</h3>
-              <p className="text-sm text-slate-800 mt-1">Purdue University</p>
-              <p className="text-sm text-slate-500 mt-1"> - </p>
-              <a href='https://www.linkedin.com/in/zhengtong-xu-4287b8174/' target='_blank'>LinkedIn</a>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                <img src={yukiNoguchi} alt="Yuki Noguchi" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-semibold text-slate-900 leading-tight">Yuki NOGUCHI, Robotics Engineer / Founder</h3>
-              <p className="text-sm text-slate-800 mt-1">Kawada Robotics Corporation</p>
-              <p className="text-sm text-slate-500 mt-1">Robot Cafe Hare-to-Ke</p>
-              <a href='https://www.linkedin.com/in/yuki-noguchi-4baa1032a/' target='_blank'>LinkedIn</a>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                <img src={sharanNayak} alt="Sharan Nayak" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-semibold text-slate-900 leading-tight">Sharan Nayak</h3>
-              <p className="text-sm text-slate-800 mt-1">Unewverse Inc. (Ooju)</p>
-              <p className="text-sm text-slate-500 mt-1">SpaceX, NASA JPL</p>
-              <a href='https://www.linkedin.com/in/sharan-nayak' target='_blank'>LinkedIn</a>
-            </div>
-
-            {Array.from({ length: 1 }).map((_, i) => (
-              <div key={i} className="text-center group">
-                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                  <img
-                    src={placeholder}
-                    alt="Speaker to be announced"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="font-semibold text-slate-900 leading-tight">TBA</h3>
-                <p className="text-sm text-slate-500 mt-1">--</p>
-              </div>
-            ))}
-          </div>
-
-        </section>
-
-        {/* Organizers */}
-        <section>
+                <section>
+                  <div className="flex justify-between items-end border-b-2 border-slate-200 pb-2 mb-8">
+                    <h2 className="text-2xl font-bold">Speakers</h2>
+                    <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSdD0QcQhnkvSv4wjp4P8El8bXxulrHFdlU9CUrqixH1GElx1w/viewform?usp=dialog" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm mb-1"
+                    >
+                      Apply
+                    </a>
+                  </div>
+        
+                  <p className="mb-8 text-slate-600">The full list of Speakers, Panelists, Guests, and Sponsors will be announced soon.</p>
+        
+                  <div className="space-y-12">
+                    {/* Speaker 1: Dr. Alexander Schmitz */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
+                        <img src={alexanderSchmitz} alt="Dr. Alexander Schmitz" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-grow">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-900">Dr. Alexander Schmitz</h3>
+                            <p className="text-slate-600 font-medium">XELA Robotics / Waseda University</p>
+                          </div>
+                          <a href='https://www.linkedin.com/in/schmitz-alexander/' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-slate-800 italic text-lg">"Tactile Sensing for Adaptive Dexterous Manipulation"</h4>
+                          <p className="mt-2 text-slate-700 leading-relaxed">
+                            In this talk, we present how tactile sensing enables robust and adaptive dexterous manipulation in real-world environments. Fine manipulation tasks—such as in-hand reorientation, precision grasping, and deformable object handling—require continuous feedback at the point of contact. Vision alone is insufficient to capture micro-contact dynamics, slip events, and force distribution.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    {/* Speaker 2: Zhengtong Xu */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
+                        <img src={zhengtongXu} alt="Zhengtong Xu" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-grow">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-900">Zhengtong Xu</h3>
+                            <p className="text-slate-600 font-medium">Purdue University</p>
+                          </div>
+                          <a href='https://www.linkedin.com/in/zhengtong-xu-4287b8174/' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-slate-800 italic text-lg">"Multimodal Contact Grounding for Robot Dexterity"</h4>
+                          <p className="mt-2 text-slate-700 leading-relaxed">
+                            In this talk, I will present our recent works on leveraging vision and touch for robot perception and policy learning. Beyond vision and robot proprioception, we treat contact as a first-class state to describe and model the evolution of dexterous contact-rich manipulation. I will share practical takeaways and insights on contact modeling, and its impact on policy learning.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    {/* Speaker 3: Yuki NOGUCHI */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
+                        <img src={yukiNoguchi} alt="Yuki NOGUCHI" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-grow">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-900">Yuki NOGUCHI</h3>
+                            <p className="text-slate-600 font-medium">Kawada Robotics Corporation</p>
+                          </div>
+                          <a href='https://www.linkedin.com/in/yuki-noguchi-4baa1032a/' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-slate-800 italic text-lg">"Bridging Industrial Precision and Social Interaction: Lessons from NEXTAGE Deployment in a Robot Cafe."</h4>
+                          <p className="mt-2 text-slate-700 leading-relaxed">
+                            In this talk, I will share technical insights from developing the dual-arm robot "NEXTAGE" and its real-world application at "Robot Cafe Hare-to-Ke." I will discuss the challenges of transitioning from controlled industrial environments to unpredictable social settings, focusing on multimodal integration, safety, and the "dexterous" nuances required for human-robot collaboration.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+        
+                    {/* Speaker 4: Sharan Nayak */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
+                        <img src={sharanNayak} alt="Sharan Nayak" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-grow">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-900">Sharan Nayak</h3>
+                            <p className="text-slate-600 font-medium">Unewverse Inc. (Ooju)</p>
+                          </div>
+                          <a href='https://www.linkedin.com/in/sharan-nayak' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-slate-800 italic text-lg">"Training robots through human demonstrations using XR devices"</h4>
+                          <p className="mt-2 text-slate-700 leading-relaxed">
+                            In this talk, we present a scalable data infrastructure for embodied intelligence built on real-world interaction capture. We argue that generalization in robotics is fundamentally limited by insufficient diversity and structure in existing datasets.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+        
+                {/* Organizers */}        <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Organizers</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8">
 
