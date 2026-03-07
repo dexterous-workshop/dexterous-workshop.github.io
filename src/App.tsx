@@ -8,8 +8,12 @@ import alexanderSchmitz from './assets/alexanderschmitz.jpeg';
 import yukiNoguchi from './assets/yukinoguchi.png';
 import changjooNam from './assets/changjoonam.png';
 import sharanNayak from './assets/sharannayak.png';
+import shinYounghak from './assets/shinyounghak.png';
+import seonilSon  from './assets/seonilson.png';
+import jaeinKim from './assets/jaeinKim.jpeg';
+import placeHolder from './assets/placeholder.jpg';
 
-import placeholder from './assets/placeholder.jpg'
+
 import rlwrldLogo from './assets/rlwrld.jpg';
 import xelaLogo from './assets/xela-logo.jpg';
 // import skt from './assets/skt.jpg';
@@ -297,8 +301,30 @@ const App: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
+                    {/* Speaker 3: Zhengtong Xu */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
+                        <img src={seonilSon} alt="Seonil Son" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-grow">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-900">Seonil Son</h3>
+                            <p className="text-slate-600 font-medium">RLWRLD / Seoul National University</p>
+                          </div>
+                          <a href='https://www.linkedin.com/in/deftson/' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-slate-800 italic text-lg">"Skin in the Game: Exploring Contact Sensing for RL in Dexterous VLAs"</h4>
+                          <p className="mt-2 text-slate-700 leading-relaxed">
+                            Dexterous manipulation fundamentally depends on contact—yet most VLA policies remain "numb," relying on vision and position based states alone. We share our experience fusing tactile and torque signals into VLA policies, and discuss how these contact-rich signals can help tackle sample efficiency challenges for real-world reinforcement learning (RL) applied to dexterous manipulation.
+                          </p>
+                        </div>
+                      </div>
+                    </div>                    
         
-                    {/* Speaker 3: Yuki NOGUCHI */}
+                    {/* Speaker 4: Yuki NOGUCHI */}
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                       <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
                         <img src={yukiNoguchi} alt="Yuki NOGUCHI" className="w-full h-full object-cover" />
@@ -307,7 +333,7 @@ const App: React.FC = () => {
                         <div className="flex justify-between items-start">
                           <div>
                             <h3 className="text-xl font-bold text-slate-900">Yuki NOGUCHI</h3>
-                            <p className="text-slate-600 font-medium">Kawada Robotics Corporation</p>
+                            <p className="text-slate-600 font-medium">Kawada Robotics Corporation / Japan Advanced Institute of Science and Technology</p>
                           </div>
                           <a href='https://www.linkedin.com/in/yuki-noguchi-4baa1032a/' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
                         </div>
@@ -320,7 +346,7 @@ const App: React.FC = () => {
                       </div>
                     </div>
         
-                    {/* Speaker 4: Sharan Nayak */}
+                    {/* Speaker 5: Sharan Nayak */}
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                       <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
                         <img src={sharanNayak} alt="Sharan Nayak" className="w-full h-full object-cover" />
@@ -329,7 +355,7 @@ const App: React.FC = () => {
                         <div className="flex justify-between items-start">
                           <div>
                             <h3 className="text-xl font-bold text-slate-900">Sharan Nayak</h3>
-                            <p className="text-slate-600 font-medium">Unewverse Inc. (Ooju)</p>
+                            <p className="text-slate-600 font-medium">Unewverse Inc. (Ooju) / University of Maryland</p>
                           </div>
                           <a href='https://www.linkedin.com/in/sharan-nayak' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
                         </div>
@@ -341,6 +367,29 @@ const App: React.FC = () => {
                         </div>
                       </div>
                     </div>
+
+                    {/* Speaker 6: Quanting Xie */}
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      <div className="w-32 h-32 flex-shrink-0 rounded-xl bg-slate-100 overflow-hidden shadow-sm">
+                        <img src={placeHolder} alt="Quanting Xie" className="w-full h-full object-cover" />
+                      </div>
+                      <div className="flex-grow">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h3 className="text-xl font-bold text-slate-900">Quanting Xie</h3>
+                            <p className="text-slate-600 font-medium">Origami Robotics / Carnegie Mellon University</p>
+                          </div>
+                          <a href='https://www.linkedin.com/in/quanting-xie/' target='_blank' className="text-blue-600 hover:underline text-sm font-medium">LinkedIn</a>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="font-bold text-slate-800 italic text-lg">TBA</h4>
+                          <p className="mt-2 text-slate-700 leading-relaxed">
+                            TBA
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </section>
         
@@ -370,16 +419,6 @@ const App: React.FC = () => {
 
             <div className="text-center group">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
-                <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Ph.D.</h3>
-              <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
-              <p className="text-sm text-slate-500 mt-1"> . </p>
-              <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                 <img src={jehyukJang} alt="Jehyuk Jang" className="w-full h-full object-cover" />
               </div>
               <h3 className="font-semibold text-slate-800 leading-tight">Jehyuk Jang, Ph.D.</h3>
@@ -402,8 +441,8 @@ const App: React.FC = () => {
 
         <section>
           <h2 className="text-2xl font-bold border-b-2 border-slate-200 pb-2 mb-8">Steering Committee</h2>
+          <p className="mb-8 text-slate-600">We are actively seeking members to join the Steering Committee. The full list will be announced soon.</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-12 gap-x-8"> 
-
             <div className="text-center group">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
                 <img src={changjooNam} alt="Changjoo Nam" className="w-full h-full object-cover" />
@@ -412,6 +451,26 @@ const App: React.FC = () => {
               <p className="text-sm text-slate-800 mt-1">Sogang University</p>
               <p className="text-sm text-slate-500 mt-1">AI Robotics Lab</p>
               <a href='https://sites.google.com/site/changjoonam/' target='_blank'>Website</a>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={shinYounghak} alt="YoungHak Shin" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-800 leading-tight">YoungHak Shin, Professor</h3>
+              <p className="text-sm text-slate-800 mt-1">Mokpo National University</p>
+              <p className="text-sm text-slate-500 mt-1"> . </p>
+              <a href='https://www.linkedin.com/in/younghak-shin-6b2542157/' target='_blank'>LinkedIn</a>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-slate-300 flex items-center justify-center border-2 border-transparent group-hover:border-blue-400 transition-colors overflow-hidden">
+                <img src={jaeinKim} alt="Jae In Kim" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="font-semibold text-slate-800 leading-tight">Jae In Kim, Ph.D. Director / Principal researcher</h3>
+              <p className="text-sm text-slate-800 mt-1">ETRI</p>
+              <p className="text-sm text-slate-500 mt-1">Edge Computing Application Service Research Section</p>
+              <a href='https://ksp.etri.re.kr/ksp/user/cb0f70a9-b049-4b2e-9964-d31303e9e04c' target='_blank'>Website</a>
             </div>
 
           </div>
